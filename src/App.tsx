@@ -406,7 +406,7 @@ function App() {
                 <div className="text-brand-blue">
                   <MessageCircle className="w-5 h-5" />
                 </div>
-                <span className="text-brand-blue font-semibold text-sm">Leggi le nostre Recensioni Google</span>
+                <span className="text-brand-blue font-semibold text-sm text-left">Recensioni Google</span>
               </div>
               <button
                 className="flex space-x-1 p-1 hover:bg-brand-blue/10 rounded transition-colors duration-200"

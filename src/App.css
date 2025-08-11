@@ -265,6 +265,11 @@ html {
     height: 2rem !important;
     max-width: 180px !important;
   }
+  
+  /* Ensure text alignment on mobile */
+  .text-left {
+    text-align: left !important;
+  }
 }
 
 /* Desktop logo adjustments */
