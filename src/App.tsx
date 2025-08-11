@@ -315,7 +315,7 @@ function App() {
               <img 
                 src="/Logo.png" 
                 alt="Studio Mobilitas Logo" 
-                className="h-12 w-auto logo-glow"
+                className="h-8 w-auto logo-glow max-w-[120px]"
               />
             </motion.div>
             
@@ -600,7 +600,7 @@ function App() {
       {/* Final Section - Health Quote */}
       <div className="px-4 py-8">
         <motion.div
-          className="max-w-md mx-auto"
+          className="max-w-md w-full"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}

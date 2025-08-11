@@ -262,6 +262,15 @@ html {
   }
   
   .logo-glow {
-    height: 12rem !important;
+    height: 2rem !important;
+    max-width: 180px !important;
+  }
+}
+
+/* Desktop logo adjustments */
+@media (min-width: 481px) {
+  .logo-glow {
+    height: 4rem !important;
+    max-width: 280px !important;
   }
 }
