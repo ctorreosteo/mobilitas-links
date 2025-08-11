@@ -1,0 +1,29 @@
+{
+  "short_name": "OsteoTouch",
+  "name": "OsteoTouch - Il tuo Studio Osteopatico di riferimento",
+  "description": "Una vita libera da dolori e limitazioni, per invecchiare in salute nonostante lo stile di vita moderno.",
+  "icons": [
+    {
+      "src": "pittogramma.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "pittogramma.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "pittogramma.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#002552",
+  "background_color": "#002552",
+  "orientation": "portrait",
+  "categories": ["health", "medical", "wellness"],
+  "lang": "it"
+}

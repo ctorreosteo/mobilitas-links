@@ -1,0 +1,267 @@
+/* Custom styles for Studio Mobilitas Links */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 37, 82, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(114, 250, 147, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(114, 250, 147, 0.7);
+}
+
+/* Background gradient effect */
+.bg-brand-blue {
+  background: linear-gradient(180deg, #002552 0%, #002552 25%, rgba(114, 250, 147, 0.05) 50%, rgba(114, 250, 147, 0.12) 75%, rgba(114, 250, 147, 0.18) 100%);
+  position: relative;
+}
+
+.bg-brand-blue::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 25% 20%, rgba(114, 250, 147, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 75% 30%, rgba(114, 250, 147, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 50% 70%, rgba(114, 250, 147, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(114, 250, 147, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(114, 250, 147, 0.2);
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Subtle glow animation */
+@keyframes subtleGlow {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.subtle-glow {
+  animation: subtleGlow 4s ease-in-out infinite;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #002552 0%, #72fa93 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Brand gradient text */
+.brand-gradient-text {
+  background: linear-gradient(135deg, var(--color-blue-dark) 0%, var(--color-green) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* White gradient text for blue background */
+.white-gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Brand-specific animations */
+@keyframes brandGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(114, 250, 147, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(114, 250, 147, 0.6);
+  }
+}
+
+.brand-glow {
+  animation: brandGlow 3s ease-in-out infinite;
+}
+
+/* Green button glow animation */
+@keyframes greenGlow {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(114, 250, 147, 0.3);
+  }
+  50% {
+    box-shadow: 0 8px 25px rgba(114, 250, 147, 0.6);
+  }
+}
+
+.green-glow {
+  animation: greenGlow 2s ease-in-out infinite;
+}
+
+/* Custom button styles */
+.brand-button {
+  background: var(--color-green);
+  color: var(--color-blue-dark);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.brand-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(114, 250, 147, 0.4);
+}
+
+/* Brand card styles */
+.brand-card {
+  background: var(--color-green);
+  border: 2px solid var(--color-green);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  color: var(--color-blue-dark);
+}
+
+.brand-card:hover {
+  border-color: var(--color-green);
+  box-shadow: 0 10px 30px rgba(114, 250, 147, 0.3);
+}
+
+/* Link button specific styles */
+.link-button {
+  background: var(--color-green);
+  border: none;
+  color: var(--color-blue-dark);
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.link-button:hover {
+  background: var(--color-green);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 25px rgba(114, 250, 147, 0.4),
+    0 0 30px rgba(114, 250, 147, 0.2);
+}
+
+/* Enhanced green button styles */
+.green-button {
+  background: var(--color-green);
+  color: var(--color-blue-dark);
+  border: none;
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(114, 250, 147, 0.2);
+}
+
+.green-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(114, 250, 147, 0.4);
+  background: var(--color-green);
+}
+
+.green-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(114, 250, 147, 0.3);
+}
+
+/* Top bar and footer styles */
+.top-bar, .footer-bar {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 37, 82, 0.8);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Logo glow effect for image */
+.logo-glow {
+  filter: drop-shadow(0 0 25px rgba(114, 250, 147, 0.6));
+  transition: all 0.3s ease;
+}
+
+.logo-glow:hover {
+  filter: drop-shadow(0 0 35px rgba(114, 250, 147, 0.9));
+}
+
+/* Button ellipsis dots */
+.ellipsis-dots {
+  display: flex;
+  gap: 2px;
+}
+
+.ellipsis-dots > div {
+  width: 3px;
+  height: 3px;
+  background-color: var(--color-blue-dark);
+  border-radius: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .max-w-md {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+  
+  .text-4xl {
+    font-size: 2rem;
+  }
+  
+  .text-2xl {
+    font-size: 1.5rem;
+  }
+  
+  .logo-glow {
+    height: 12rem !important;
+  }
+}
