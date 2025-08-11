@@ -594,36 +594,59 @@ function App() {
             </motion.div>
           )}
         </AnimatePresence>
-        </motion.div>
-      </div>
+          {/* Final Section - Health Quote */}
+          <motion.div
+            className="mt-8"
+            variants={itemVariants}
+          >
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-left">
+              <div className="mb-6">
+                <div className="w-12 h-0.5 bg-brand-green mb-4"></div>
+                <blockquote className="text-white/90 text-lg font-light italic leading-relaxed">
+                  "La salute non è tutto, ma senza salute tutto è niente."
+                </blockquote>
+                <div className="w-12 h-0.5 bg-brand-green mt-4"></div>
+              </div>
+              
+              <div className="space-y-4">
+                <h3 className="text-white font-semibold text-xl">
+                  Non vediamo l'ora di accoglierti in studio 😁
+                </h3>
+                <p className="text-white/70 text-sm leading-relaxed">
+                  Il tuo benessere è la nostra priorità. 
+                  Iniziamo insieme questo percorso verso una vita più sana e libera.
+                </p>
+              </div>
+            </div>
+          </motion.div>
 
-      {/* Final Section - Health Quote */}
-      <div className="px-4 py-8">
-        <motion.div
-          className="max-w-md w-full"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-left">
-            <div className="mb-6">
-              <div className="w-12 h-0.5 bg-brand-green mb-4"></div>
-              <blockquote className="text-white/90 text-lg font-light italic leading-relaxed">
-                "La salute non è tutto, ma senza salute tutto è niente."
-              </blockquote>
-              <div className="w-12 h-0.5 bg-brand-green mt-4"></div>
-            </div>
-            
-            <div className="space-y-4">
-              <h3 className="text-white font-semibold text-xl">
-                Non vediamo l'ora di accoglierti in studio 😁
-              </h3>
-              <p className="text-white/70 text-sm leading-relaxed">
-                Il tuo benessere è la nostra priorità. 
-                Iniziamo insieme questo percorso verso una vita più sana e libera.
-              </p>
-            </div>
-          </div>
+          {/* Share Menu */}
+                  <ShareMenu
+          isOpen={shareMenu.isOpen}
+          onClose={closeShareMenu}
+          url={shareMenu.url}
+          title={shareMenu.title}
+          position={shareMenu.position}
+          onCopyConfirm={showCopyConfirmation}
+        />
+
+        {/* Copy Confirmation Toast */}
+        <AnimatePresence>
+          {showCopyToast && (
+            <motion.div
+              className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50"
+              initial={{ opacity: 0, y: 50, scale: 0.8 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 50, scale: 0.8 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+            >
+              <div className="bg-brand-green text-brand-blue px-6 py-3 rounded-full shadow-lg border-2 border-brand-blue/20 flex items-center space-x-2">
+                <Copy className="w-4 h-4" />
+                <span className="font-medium text-sm">Link copiato negli appunti!</span>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
         </motion.div>
       </div>
 
