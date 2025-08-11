@@ -284,8 +284,13 @@ function App() {
     <div className="min-h-screen bg-brand-blue flex flex-col font-montserrat">
       {/* Top Bar */}
       <div className="bg-brand-blue/80 backdrop-blur-sm border-b border-white/10 px-4 py-2 flex justify-between items-center">
-        <Star className="w-4 h-4 text-white" />
-        <Upload className="w-4 h-4 text-white" />
+        <div></div>
+        <button
+          className="hover:bg-white/10 rounded transition-colors duration-200 p-1"
+          onClick={(e) => handleShareClick(e, window.location.href, 'Studio Mobilitas - Link')}
+        >
+          <Upload className="w-4 h-4 text-white" />
+        </button>
       </div>
 
       {/* Main Content */}
@@ -592,6 +597,36 @@ function App() {
         </motion.div>
       </div>
 
+      {/* Final Section - Health Quote */}
+      <div className="px-4 py-8">
+        <motion.div
+          className="max-w-md mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-left">
+            <div className="mb-6">
+              <div className="w-12 h-0.5 bg-brand-green mb-4"></div>
+              <blockquote className="text-white/90 text-lg font-light italic leading-relaxed">
+                "La salute non è tutto, ma senza salute tutto è niente."
+              </blockquote>
+              <div className="w-12 h-0.5 bg-brand-green mt-4"></div>
+            </div>
+            
+            <div className="space-y-4">
+              <h3 className="text-white font-semibold text-xl">
+                Non vediamo l'ora di accoglierti in studio 😁
+              </h3>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Il tuo benessere è la nostra priorità. 
+                Iniziamo insieme questo percorso verso una vita più sana e libera.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
       {/* Footer */}
       <div className="bg-brand-blue/80 backdrop-blur-sm border-t border-white/10 px-4 py-3">
         <div className="flex justify-center space-x-4 text-xs text-white/60">
@@ -601,8 +636,6 @@ function App() {
           >
             Cookie Preferences
           </button>
-          <span>•</span>
-          <span>Report</span>
           <span>•</span>
           <button 
             className="hover:text-white/80 transition-colors duration-200"
